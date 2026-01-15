@@ -32,6 +32,7 @@ function sum3DEuclideanDistances(points) {
 }
 
 app.get('/', (req, res) => {
+    try{
     console.log(req.body)
     const coordinates = req.body.coordinates
     let distance = 0;
@@ -51,6 +52,10 @@ app.get('/', (req, res) => {
         speed,
         velocity
     })
+    }
+    catch (e){
+        console.log(e)
+    }
 })
 
 app.listen(port, () => {
