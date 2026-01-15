@@ -31,7 +31,7 @@ function sum3DEuclideanDistances(points) {
   return sum;
 }
 
-app.post('/', (req, res) => {
+app.post('/calculate-velocity', (req, res) => {
     try{
     console.log(req.body)
     const coordinates = req.body.coordinates
